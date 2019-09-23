@@ -28,7 +28,7 @@
 - name: deploy java application on all nodes 
   get_url:
     url: https://ramu12345.s3.us-east-2.amazonaws.com/mahaLogin-2.0.war
-    dest: /var/lib/tomcat7/webapps/mahaLogin-2.0.war
+    dest: /var/lib/tomcat7/webapps/mahaLogin.war
     force_basic_auth: yes
 
     
