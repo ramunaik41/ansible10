@@ -27,8 +27,8 @@
   notify: restarttomcat
 - name: deploy java application on all nodes 
   get_url:
-    url: http://52.15.94.216:8081/artifactory/sprint2/7/target/mahaLogin-1.0.war
-    dest: /var/lib/tomcat7/webapps/mahaLogin-1.0.war
+    url: http://52.15.94.216:8081/artifactory/sprint2/8/target/mahaLogin-1.0.war
+    dest: /var/lib/tomcat7/webapps/mahaLogin.war
     force_basic_auth: yes
 
     
