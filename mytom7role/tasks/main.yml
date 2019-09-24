@@ -28,7 +28,7 @@
 - name: deploy java application on all nodes 
   get_url:
     url: http://52.15.94.216:8081/artifactory/sit/5/target/mahaLogin-2.0.war
-    dest: /var/lib/tomcat7/webapps/mahaLogin-2.0.war
+    dest: /var/lib/tomcat7/webapps/mahaLogin.war
     force_basic_auth: yes
 
     
