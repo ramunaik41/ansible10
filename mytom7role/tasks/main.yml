@@ -25,11 +25,21 @@
     src: templates/mytomuser.j2
     dest: /etc/tomcat7/tomcat-users.xml
   notify: restarttomcat
+
+- name: deleting mahalogin war file from /var/lib/tomcat7/webapps/  
+  file:
+    path: /var/lib/tomcat7/webapps/{{item}}
+    state: absent
+  with_items:
+   - mahaLogin.war
+   - mahaLogin 
+
 - name: deploy java application on all nodes 
   get_url:
-    url: http://52.15.94.216:8081/artifactory/sprint2/8/target/mahaLogin-1.0.war
-    dest: /var/lib/tomcat7/webapps/mahaLogin.war
+    url: http://18.217.169.247:8081/artifactory/uat/2/target/mahaLogin-1.0.war
+    dest: /var/lib/tomcat7/webapps/
     force_basic_auth: yes
+  notify: restarttomcat  
 
     
     
